@@ -10,7 +10,7 @@ app.use(cors());
 // 🔐 Your credentials will come from frontend
 app.post("/connect-azure", async (req, res) => {
     const { tenantId, clientId, clientSecret, subscriptionId } = req.body;
-
+ 
     try {
         // STEP 1: Get OAuth Token
         const tokenResponse = await axios.post(
